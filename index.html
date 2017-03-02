@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<style type="text/css">
+        body{
+            /*padding:0;*/
+            /*margin: 0;*/
+        }
+		/*#div1 {*/
+            /*width: 200px;*/
+            /*height: 200px;*/
+            /*background: #cccccc;*/
+        /*}*/
+	</style>
+
+    <script type="text/javascript">
+        function open_win(obj) {
+            console.info(obj.value);
+//            window.open(document.baseURI);
+        }
+
+        function checkValue(obj){
+
+            var checked = obj.checked;
+            console.info(checked);
+            if (checked) {
+                obj.title = "";
+            }
+        }
+
+        function getValue(obj) {
+            console.info(obj.value);
+            console.info(obj.checked);
+        }
+    </script>
+    <!--<base href="http://www.jd.com/" >-->
+    <meta charset="UTF-8">
+    <title>22</title>
+</head>
+<body>
+
+<div id="div1" style="width:200px;height:200px; background: #cccccc">&amp; &gt; &lt;&quot;</div>
+<p>Loook Ma, I am coding <abbr title="Hyper Text Markup Language">HTML-</abbr>.</p>
+<input id="_open" type="button" name="xxd" value="win" onclick="open_win(this)"/>
+<a href="javascript:console.info(&quot; dd &quot;)" title="super link">link</a>
+<input id="checkAll" type="checkbox" title="全选" onclick="checkValue(this)" checked/><label for="checkAll"></label>
+<input id="radio1" name="hobby" type="radio" title="单选" onclick="getValue(this)" value="1"/><label for="radio1">羽毛球</label>
+<input id="radio2" name="hobby" type="radio" title="单选" onclick="getValue(this)" value="2"/><label for="radio2">篮球</label>
+</body>
+</html>
